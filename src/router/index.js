@@ -21,63 +21,97 @@ import Layout from '../views/layout/Layout'
     icon: 'svg-name'             the icon show in the sidebar,
   }
 **/
-export const constantRouterMap = [
-  { path: '/login', component: () => import('@/views/login/index'), hidden: true },
-  { path: '/404', component: () => import('@/views/404'), hidden: true },
+export const constantRouterMap = [{
+        path: '/login',
+        component: () =>
+            import ('@/views/login/index'),
+        hidden: true
+    },
+    {
+        path: '/404',
+        component: () =>
+            import ('@/views/404'),
+        hidden: true
+    },
 
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/dashboard',
-    name: 'Dashboard',
-    hidden: true,
-    children: [{
-      path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
-    }]
-  },
+    {
+        path: '/',
+        component: Layout,
+        redirect: '/dashboard',
+        name: 'Dashboard',
+        hidden: true,
 
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
+        children: [{
+            path: 'dashboard',
+            component: () =>
+                import ('@/views/dashboard/index')
+        }]
+    },
 
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
-      }
-    ]
-  },
+    {
+        path: '/example',
+        component: Layout,
+        redirect: '/example/table',
+        name: 'Example',
+        meta: { title: '项目管理', icon: 'page' },
+        children: [{
+                path: 'table',
+                name: 'Table',
+                component: () =>
+                    import ('@/views/table/index'),
+                meta: { title: '项目列表', icon: 'folder' },
+            },
+            {
+                path: 'tree',
+                name: 'Tree',
+                component: () =>
+                    import ('@/views/tree/index'),
+                meta: { title: '二级菜单', icon: 'money' }
+            }
+        ]
+    },
 
-  { path: '*', redirect: '/404', hidden: true }
+    {
+        path: '/form',
+        component: Layout,
+        children: [{
+            path: 'index1',
+            name: 'Form',
+            component: () =>
+                import ('@/views/table/index'),
+            meta: { title: '文件管理', icon: 'folder' }
+        }]
+    },
+
+    {
+        path: '/form',
+        component: Layout,
+        children: [{
+            path: 'index2',
+            name: 'Form',
+            component: () =>
+                import ('@/views/form/index'),
+            meta: { title: '业务统计', icon: 'yj' }
+        }]
+    },
+
+    {
+        path: '/form',
+        component: Layout,
+        children: [{
+            path: 'index3',
+            name: 'Form',
+            component: () =>
+                import ('@/views/form/index'),
+            meta: { title: '系统设置', icon: 'config' }
+        }]
+    },
+
+    { path: '*', redirect: '/404', hidden: true }
 ]
 
 export default new Router({
-  // mode: 'history', //后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
-  routes: constantRouterMap
+    // mode: 'history', //后端支持可开
+    scrollBehavior: () => ({ y: 0 }),
+    routes: constantRouterMap
 })
-
