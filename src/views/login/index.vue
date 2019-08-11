@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
-      <img class="title-logo" src="src/assets/login/logo.png" alt="">
+      <img class="title-logo" src="~@/assets/login/logo.png" alt="">
       <el-row>
         <el-col :span="12">
           <el-form-item prop="username">
@@ -145,7 +145,7 @@ $bg:#fff;
 $dark_gray:#889aa4;
 $light_gray:#eee;
 .login-container {
-  background-image: url(/src/assets/login/login-bg.jpg);
+  background-image: url(~@/assets/login/login-bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;

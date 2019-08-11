@@ -1,29 +1,29 @@
 <template>
   <div class="app-wrapper" :class="classObj">
     <div class="header-wrap">
-      <img class="title-logo" src="src/assets/login/logo2.png" alt="">
+      <img class="title-logo" src="~@/assets/login/logo2.png" alt="">
       <ul>
         <li class="user">
-          <img src="src/assets/login/user.png" alt=""><span>系统管理员</span>
+          <img src="~@/assets/login/user.png" alt=""><span>系统管理员</span>
         </li>
         <li style="background-color: #fa8564;">
           <el-tooltip class="item" effect="dark" content="密码管理" placement="bottom">
-            <img src="src/assets/login/password.svg" alt="">
+            <img src="~@/assets/login/password.svg" alt="">
           </el-tooltip>
         </li>
         <li style="background-color: #aec785;" @click="logout">
           <el-tooltip class="item" effect="dark" content="退出系统" placement="bottom">
-            <img src="src/assets/login/power.svg" alt="">
+            <img src="~@/assets/login/power.svg" alt="">
           </el-tooltip>
         </li>
         <li style="background-color: #22beef;">
           <el-tooltip class="item" effect="dark" content="下载" placement="bottom">
-            <img src="src/assets/login/download.svg" alt="">
+            <img src="~@/assets/login/download.svg" alt="">
           </el-tooltip>
         </li>
         <li style="background-color: #ffc100;">
           <el-tooltip class="item" effect="dark" content="系统说明" placement="bottom">
-            <img src="src/assets/login/what.svg" alt="">
+            <img src="~@/assets/login/what.svg" alt="">
           </el-tooltip>
         </li>
       </ul>
