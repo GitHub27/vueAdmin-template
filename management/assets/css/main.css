@@ -1,0 +1,370 @@
+    .dashboard-container {
+        margin: 20px;
+    }
+    
+    .dashboard-text {
+        font-size: 30px;
+        line-height: 46px;
+    }
+    
+    @keyframes resizeanim {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    
+    .resize-triggers {
+        animation: 1ms resizeanim;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .resize-triggers,
+    .resize-triggers>div,
+    .contract-trigger:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: -1
+    }
+    
+    .resize-triggers>div {
+        background: #eee;
+        overflow: auto;
+    }
+    
+    .contract-trigger:before {
+        width: 200%;
+        height: 200%;
+    }
+    
+    .scrollbar-wrapper {
+        width: 55px;
+        float: left;
+    }
+    
+    #app .showMenu3 .sidebar-container {
+        width: 232px!important;
+    }
+    
+    .el-submenu__title {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .el-submenu {
+        /* box-sizing: border-box; */
+        border-left: 5px transparent solid;
+    }
+    
+    .el-submenu.active {
+        background-color: #2ab8d5;
+        border-left: 5px #f27935 solid;
+    }
+    
+    .el-submenu:focus,
+    .el-submenu:hover {
+        background-color: #2ab8d5;
+        border-left: 5px #f27935 solid;
+        outline: 0;
+    }
+    
+    .el-submenu__title:focus,
+    .el-submenu__title:hover {
+        background-color: transparent;
+        /* border-left: 5px #f27935 solid; */
+        outline: 0;
+    }
+    
+    .scrollbar-wrapper2 {
+        width: 177px;
+        background-color: #2b3a40;
+    }
+    
+    .scrollbar-wrapper2 h1 {
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .el-menu2 {
+        background-color: #2b3a40;
+        /* padding-left: 18px; */
+    }
+    
+    .el-menu2 li {
+        font-size: 16px;
+        width: 100%;
+        color: #fff;
+        font-weight: normal;
+    }
+    
+    .el-menu2 h1,
+    h2 {
+        padding-left: 18px;
+    }
+    
+    .el-menu2 h1 {
+        height: 32px;
+        line-height: 32px;
+    }
+    
+    h1,
+    h2 {
+        font-weight: normal;
+    }
+    
+    .el-menu2 h2 {
+        margin: 10px 0 0;
+        font-size: 14px;
+        height: 35px;
+        line-height: 30px;
+    }
+    
+    .my-active {
+        background-color: #95a0aa;
+    }
+    
+    .menu-level3 {}
+    
+    .menu-level3 p {
+        height: 34px;
+        line-height: 34px;
+        cursor: pointer;
+        font-size: 14px;
+        padding-left: 39px;
+        margin: 0 auto;
+    }
+    
+    .menu-level3 p:focus,
+    .menu-level3 p:hover {
+        background-color: #95a0aa;
+        outline: 0;
+    }
+    
+    .my-icon-right {
+        width: 7px;
+        height: 10px;
+        display: inline-block;
+        background-image: url(../../assets/img/right.png);
+        background-size: 100% 100%;
+        margin-right: 8px;
+    }
+    
+    .my-icon-plus {
+        width: 11px;
+        height: 11px;
+        display: inline-block;
+        background-image: url(../../assets/img/plus.png);
+        background-size: 100% 100%;
+        margin-right: 8px;
+    }
+    
+    .my-icon-cd {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-image: url(../../assets/img/icon-cd.png);
+        background-size: 100% 100%;
+        margin-right: 8px;
+        /* margin-top: 15px; */
+        vertical-align: -1px;
+    }
+    
+    .my-icon-search {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background-image: url(../../assets/img/search.png);
+        background-size: 100% 100%;
+        margin-right: 8px;
+        /* margin-top: 15px; */
+        vertical-align: -1px;
+        cursor: pointer;
+    }
+    
+    .my-icon-tip1 {
+        width: 84px;
+        height: 40px;
+        display: inline-block;
+        background-image: url(../../assets/img/tip1.png);
+        background-size: 100% 100%;
+        margin-right: 8px;
+    }
+    
+    .my-icon-opt1 {
+        width: 11px;
+        height: 13px;
+        display: inline-block;
+        background-image: url(../../assets/img/xmyx.png);
+        background-size: 100% 100%;
+        margin-right: 1px;
+        vertical-align: -1px;
+    }
+    
+    .my-icon-opt2 {
+        width: 11px;
+        height: 13px;
+        display: inline-block;
+        background-image: url(../../assets/img/xmyx2.png);
+        background-size: 100% 100%;
+        margin-right: 1px;
+        vertical-align: -1px;
+    }
+    
+    .my-icon-menu-r {
+        width: 6px;
+        height: 9px;
+        display: inline-block;
+        background-image: url(../../assets/img/menu-r.png);
+        background-size: 100% 100%;
+        margin: 0 4px;
+        vertical-align: 2px;
+    }
+    
+    .my-icon-ljt {
+        width: 15px;
+        height: 17px;
+        display: inline-block;
+        background-image: url(../../assets/img/ljt.png);
+        background-size: 100% 100%;
+        margin: 0 4px;
+        vertical-align: 2px;
+    }
+    
+    .my-icon-fx {
+        width: 13px;
+        height: 18px;
+        display: inline-block;
+        background-image: url(../../assets/img/fx.png);
+        background-size: 100% 100%;
+        margin: 0 4px;
+        vertical-align: 2px;
+    }
+    
+    #app .sidebar-container .scrollbar-wrapper {
+        height: calc(100% + 15px);
+        overflow: hidden;
+    }
+    
+    .menu-switch {
+        width: 14px;
+        height: 33px;
+        display: inline-block;
+        position: absolute;
+        top: 300px;
+        left: 41px;
+        cursor: pointer;
+    }
+    
+    .search-wrap {
+        float: right;
+        color: #2c3e50;
+        border-bottom: 1px solid #4a4e5b;
+        height: 55px;
+    }
+    
+    .search-wrap input {
+        background: none;
+        outline: none;
+        border: 0px;
+        width: 410px;
+        height: 48px;
+        line-height: 48px;
+        padding-left: 10px;
+    }
+    
+    .navbar2 {
+        background-color: #e8eff0;
+    }
+    
+    .table-menu {}
+    
+    .select {
+        display: inline-block;
+        width: 218px;
+        height: 41px;
+        position: relative;
+        vertical-align: middle;
+        padding: 0;
+        margin-left: 10px;
+        overflow: hidden;
+        background-color: #fff;
+        color: #54657e;
+        border: 1px solid #cad3df;
+        text-shadow: none;
+        border-radius: 1px;
+        transition: box-shadow 0.25s ease;
+        z-index: 2;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    }
+    
+    .select:hover {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    }
+    
+    .select:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: #ccc;
+        top: 14px;
+        right: 10px;
+        cursor: pointer;
+        z-index: -2;
+    }
+    
+    .select select {
+        color: #54657e;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background: transparent;
+        background-image: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    
+    .select select:focus {
+        outline: none;
+    }
+    
+    .el-button {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #fdfdfd;
+        border: 1px solid #dcdfe6;
+        color: #5a5a5a;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: 0;
+        margin: 0;
+        font-size: 14px;
+        transition: .1s;
+        padding: 2px 15px;
+        font-size: 14px;
+        border-radius: 1px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    }
+    
+    .el-button--primary {
+        background-color: #3290d1;
+        color: #fff;
+    }
+    
+    .table-content {
+        margin-top: 15px;
+    }
