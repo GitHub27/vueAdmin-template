@@ -1,0 +1,312 @@
+<!-- 核销汇总 -->
+<html class="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>办公自动化系统</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link href="./assets/css/app.8e31d8eb35557a6b71a7a9b0cfc496fb.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link href="./assets/css/hxhz.css" rel="stylesheet" />
+    <link href="./assets/css/tooltip.css" rel="stylesheet" />
+    <!-- <script type="text/javascript" charset="utf-8" async="" src="http://www.ryanpark.top/dist/static/js/4.fd79aeb0188acc4e5cd7.js"></script> -->
+</head>
+
+<body mycollectionplug="bind">
+    <div id="app">
+        <div class="app-wrapper showMenu3 hideSidebar withoutAnimation">
+            <div class="header-wrap">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO0AAAAlCAYAAACu9m5WAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjI4NTZFRENCQjVGMTFFOUE1RTNDNDNDNjdBRENEQUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjI4NTZFRERCQjVGMTFFOUE1RTNDNDNDNjdBRENEQUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMjg1NkVEQUJCNUYxMUU5QTVFM0M0M0M2N0FEQ0RBRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMjg1NkVEQkJCNUYxMUU5QTVFM0M0M0M2N0FEQ0RBRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm08DW4AAA3USURBVHja7F1rqGNX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"
+                    alt="" class="title-logo">
+                <ul>
+                    <li class="user"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTBFQTRENkFCQjZEMTFFOTlFNkJGQzIyNTNCOUExOEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTBFQTRENkJCQjZEMTFFOTlFNkJGQzIyNTNCOUExOEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MEVBNEQ2OEJCNkQxMUU5OUU2QkZDMjI1M0I5QTE4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5MEVBNEQ2OUJCNkQxMUU5OUU2QkZDMjI1M0I5QTE4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pvncz+MAAAPQSURBVHjazFlJTBNhFH4t3SyySF1ChEqoAkUxJsLJixCOBGNMNKIHlYOI4nIDImqCIXLSg8YlhpPrycTEeDEiB09qXIBINUQIEjSAAbFQ2tL6Xn2Fpnam/z+01S/5krbzlm/+mXnz3l9d09tZ0AA9sgJZiSxHFiHXI9P5uBs5ivyEfI3sRr5CBmQTGSTt85DHkQeQ+Sp2ZmQOsgy5h38bQd5FXkN+lVkJEdg48CCyOY44JeSz7yDHsiVK4F7kALIRaYLlw8SxKOa+5Qiky38d+RC5GhIPivmAcxhkBVqRj5ANkHw0cC6rqEA6m/vIGkgdajinQUTgVWQtpB61nFu1zNBNe1Q28g6bAarXGcBm0oW+T3qD8Oy7H15O+mVDUe4eXs0QdBGF2sZPltQD0ea0wBqzLuax8fkgtH/0yIr8gSwh9+hLfFFW3KlNZkVxBDpGNpKgAt8efQ/akfUyUexWPTjS45dRsiFbSRxhTYsCjyGNMhGq1xqSYsswsqaQQOJB2QjOzDRh21IJ2wiQJn24K8mT9TZLXDWTXlPZIU0V5FoF/y8qSeD2ZGcJanctJ4HFWjy/uMV7zyF3QKvAYhKYq8Wz/+eCsG2fhG0UcklghhbPnnHx19iLcb9WgRl6rZ7zeNXeTcVfGbLxBbTfhCRwRqtz15A3ITYqmCGBY7JeW7PSoIQXX60ZCB8jW/LRgDF6B7mQW0SsM4348t+41CA093pCHcvp93NQX2CCMhbxYXohtHIBrC8r0nTQ6DAvdjdXPs/DjF+48Lio3WrBDx0ir6uGwr9npo4BD3zzxE6Yg/3h+VILRPc7l1GkYJlq0fNQrYpt2bHFEVpLLFBnN0GWcUkGfabfLsQQRziDLRjFFEA3rSCJHFZ6H1Oy9s2WpLxh2vo9MO1TvNw03G/Q83bEHSWrQwUmSBYOq8cmTYFwHaRJ36vUcCYLhcqxvaxpsWGl5bwd0zKQNH1qsbvC+zeRp3COBrJoy0suD7j9wYSLo5idrpg1lDScjTV20oETkSMfYQJrV0ufB/JxrijDUmO36mAVlo9sfHioxolgbiEIU/gwTOE4OjwbhF5sHkZmFZfvZORCRQ8LtFeyM9ZsTAFVgiYKt5D34u0s0Bk8/gfdM+VsEtn6oCdoP/JpCsU94Zxe0d0t2m7YhbyZAnGUYzfnFN5+I/h4a4zObCIJwihmHefwqfWD8UAPjhN5Q6mYy5Y/juWMrhhaBYbPliZ9B7IT/uzgy2KUfR0cS+iqyO5JUHWnjfBWHvireGwt4mZjJdv9Ylv6G+IN8jlo/BvitwADAD77A4vToC+CAAAAAElFTkSuQmCC"
+                            alt=""><span>系统管理员</span></li>
+                    <li style="background-color: rgb(250, 133, 100);"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTY1NDQyMDEwMzYyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjM3NDYiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTIyNCAzODRoNTc2QTk2IDk2IDAgMCAxIDg5NiA0ODB2Mzg0YTk2IDk2IDAgMCAxLTk2IDk2aC01NzZBOTYgOTYgMCAwIDEgMTI4IDg2NHYtMzg0QTk2IDk2IDAgMCAxIDIyNCAzODR6IG0wIDY0YTMyIDMyIDAgMCAwLTMyIDMydjM4NGEzMiAzMiAwIDAgMCAzMiAzMmg1NzZhMzIgMzIgMCAwIDAgMzItMzJ2LTM4NGEzMiAzMiAwIDAgMC0zMi0zMmgtNTc2eiBtNTc2LTE2MGEzMiAzMiAwIDEgMS02NCAwIDIyNCAyMjQgMCAwIDAtNDQ4IDAgMzIgMzIgMCAwIDEtNjQgMCAyODggMjg4IDAgMCAxIDU3NiAweiBtLTMyMCAzMjBhMzIgMzIgMCAwIDEgNjQgMHYxMjhhMzIgMzIgMCAxIDEtNjQgMHYtMTI4eiIgcC1pZD0iMzc0NyIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg=="
+                            alt="" class="el-tooltip item" aria-describedby="el-tooltip-1517" tabindex="0"></li>
+                    <li style="background-color: rgb(174, 199, 133);"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTY1NDQyMTExMTc0IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQ2NDkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTgxMy42NTMzMzMgMjUzLjAxMzMzM3E1OS4wMDggNTkuMDA4IDkxLjM0OTMzMyAxMzUuNjggMzMuNjY0IDc5LjMxNzMzMyAzMy42NjQgMTY2LjAxNnQtMzMuNjY0IDE2Ni4wMTZxLTMyLjM0MTMzMyA3Ni42NzItOTEuMzQ5MzMzIDEzNS42OHQtMTM1LjY4IDkxLjM0OTMzM3EtNzkuMzE3MzMzIDMzLjY2NC0xNjYuMDE2IDMzLjY2NHQtMTY2LjAxNi0zMy42NjRxLTc2LjY3Mi0zMi4zNDEzMzMtMTM1LjY4LTkxLjM0OTMzM3QtOTEuMzQ5MzMzLTEzNS42OHEtMzMuNjY0LTc5LjMxNzMzMy0zMy42NjQtMTY2LjAxNnQzMy42NjQtMTY2LjAxNnEzMi4zNDEzMzMtNzYuNjcyIDkxLjM0OTMzMy0xMzUuNjggMTIuMzMwNjY3LTEyLjMzMDY2NyAyOS45OTQ2NjctMTIuMzMwNjY3dDMwLjMzNiAxMi4zMzA2NjcgMTIuNjcyIDI5Ljk5NDY2Ny0xMi42NzIgMzAuMzM2cS00Ny4wMTg2NjcgNDcuMDE4NjY3LTczLjM0NCAxMDguMzMwNjY3LTI2LjY2NjY2NyA2NC0yNi42NjY2NjcgMTMyLjk5MnQyNi42NjY2NjcgMTMyLjk5MnEyNi4zMjUzMzMgNjEuMzEyIDczLjM0NCAxMDguMzMwNjY3dDEwOC4zMzA2NjcgNzMuMzQ0cTY0IDI2LjY2NjY2NyAxMzIuOTkyIDI2LjY2NjY2N3QxMzIuOTkyLTI2LjY2NjY2N3E2MS4zMTItMjYuMzI1MzMzIDEwOC4zMzA2NjctNzMuMzQ0dDczLjM0NC0xMDguMzMwNjY3cTI2LjY2NjY2Ny02NCAyNi42NjY2NjctMTMyLjk5MnQtMjYuNjY2NjY3LTEzMi45OTJxLTI2LjMyNTMzMy02MS4zMTItNzMuMzQ0LTEwOC4zMzA2NjctMTIuNjcyLTEyLjY3Mi0xMi42NzItMzAuMzM2dDEyLjY3Mi0yOS45OTQ2NjcgMzAuMzM2LTEyLjMzMDY2NyAyOS45OTQ2NjcgMTIuMzMwNjY3ek01MTIgNDIuNjY2NjY3cTE3LjY2NCAwIDMwLjE2NTMzMyAxMi41MDEzMzN0MTIuNTAxMzMzIDMwLjE2NTMzM2wwIDQyNi42NjY2NjdxMCAxNy42NjQtMTIuNTAxMzMzIDMwLjE2NTMzM3QtMzAuMTY1MzMzIDEyLjUwMTMzMy0zMC4xNjUzMzMtMTIuNTAxMzMzLTEyLjUwMTMzMy0zMC4xNjUzMzNsMC00MjYuNjY2NjY3cTAtMTcuNjY0IDEyLjUwMTMzMy0zMC4xNjUzMzN0MzAuMTY1MzMzLTEyLjUwMTMzM3oiIHAtaWQ9IjQ2NTAiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4="
+                            alt="" class="el-tooltip item" aria-describedby="el-tooltip-2295" tabindex="0"></li>
+                    <li id="download" style="background-color: rgb(34, 190, 239);"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTY1NDQyMTYwNjU2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjcgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjU0MzgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjQuMTg3NSIgaGVpZ2h0PSI2NCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNzkxLjg5MzMzMyA3NTAuOTMzMzMzaC0xOTQuNTZjLTEwLjI0IDAtMTcuMDY2NjY3LTYuODI2NjY3LTE3LjA2NjY2Ni0xNy4wNjY2NjZzNi44MjY2NjctMTcuMDY2NjY3IDE3LjA2NjY2Ni0xNy4wNjY2NjdoMTk0LjU2YzEwOS4yMjY2NjcgMCAxOTcuOTczMzMzLTg4Ljc0NjY2NyAxOTcuOTczMzM0LTE5Ny45NzMzMzNzLTg4Ljc0NjY2Ny0xOTcuOTczMzMzLTE5Ny45NzMzMzQtMTk3Ljk3MzMzNGMtMTAuMjQgMC0yMC40OC02LjgyNjY2Ny0yMC40OC0xMy42NTMzMzMtMjAuNDgtMTM2LjUzMzMzMy0xMzkuOTQ2NjY3LTIzOC45MzMzMzMtMjc5Ljg5MzMzMy0yMzguOTMzMzMzQzMzNC41MDY2NjcgNjguMjY2NjY3IDIwNC44IDE5NC41NiAyMDQuOCAzNTEuNTczMzMzYzAgMTMuNjUzMzMzIDAgMjMuODkzMzMzIDMuNDEzMzMzIDQwLjk2IDAgMy40MTMzMzMgMCAxMC4yNC0zLjQxMzMzMyAxMy42NTMzMzQtMy40MTMzMzMgMy40MTMzMzMtMTAuMjQgMy40MTMzMzMtMTMuNjUzMzMzIDMuNDEzMzMzaC0zLjQxMzMzNEMxMDIuNCA0MDkuNiAzNC4xMzMzMzMgNDc3Ljg2NjY2NyAzNC4xMzMzMzMgNTYzLjJTMTAyLjQgNzE2LjggMTg3LjczMzMzMyA3MTYuOGgyMDQuOGMxMC4yNCAwIDE3LjA2NjY2NyA2LjgyNjY2NyAxNy4wNjY2NjcgMTcuMDY2NjY3cy02LjgyNjY2NyAxNy4wNjY2NjctMTcuMDY2NjY3IDE3LjA2NjY2NmgtMjA0LjhjLTEwMi40IDAtMTg3LjczMzMzMy04NS4zMzMzMzMtMTg3LjczMzMzMy0xODcuNzMzMzMzIDAtOTguOTg2NjY3IDc1LjA5MzMzMy0xNzcuNDkzMzMzIDE3NC4wOC0xODcuNzMzMzMzdi0yNy4zMDY2NjdDMTcwLjY2NjY2NyAxNzQuMDggMzE0LjAyNjY2NyAzNC4xMzMzMzMgNDkxLjUyIDM0LjEzMzMzM2MxNTMuNiAwIDI4My4zMDY2NjcgMTA5LjIyNjY2NyAzMTQuMDI2NjY3IDI1NiAxMjIuODggNi44MjY2NjcgMjIxLjg2NjY2NyAxMDUuODEzMzMzIDIyMS44NjY2NjYgMjI4LjY5MzMzNEMxMDI0IDY0OC41MzMzMzMgOTE4LjE4NjY2NyA3NTAuOTMzMzMzIDc5MS44OTMzMzMgNzUwLjkzMzMzM3oiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjU0MzkiPjwvcGF0aD48cGF0aCBkPSJNNDk0LjkzMzMzMyA5ODkuODY2NjY3aC02LjgyNjY2NmMtNi44MjY2NjctMy40MTMzMzMtMTAuMjQtMTAuMjQtMTAuMjQtMTcuMDY2NjY3di00NDMuNzMzMzMzYzAtMTAuMjQgNi44MjY2NjctMTcuMDY2NjY3IDE3LjA2NjY2Ni0xNy4wNjY2NjdzMTcuMDY2NjY3IDYuODI2NjY3IDE3LjA2NjY2NyAxNy4wNjY2Njd2NDAyLjc3MzMzM2w1NC42MTMzMzMtNTQuNjEzMzMzYzYuODI2NjY3LTYuODI2NjY3IDE3LjA2NjY2Ny02LjgyNjY2NyAyMy44OTMzMzQgMHM2LjgyNjY2NyAxNy4wNjY2NjcgMCAyMy44OTMzMzNsLTg1LjMzMzMzNCA4NS4zMzMzMzNzLTYuODI2NjY3IDMuNDEzMzMzLTEwLjI0IDMuNDEzMzM0eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNTQ0MCI+PC9wYXRoPjxwYXRoIGQ9Ik00OTQuOTMzMzMzIDk4OS44NjY2NjdjLTMuNDEzMzMzIDAtMTAuMjQgMC0xMy42NTMzMzMtMy40MTMzMzRsLTg1LjMzMzMzMy04NS4zMzMzMzNjLTYuODI2NjY3LTYuODI2NjY3LTYuODI2NjY3LTE3LjA2NjY2NyAwLTIzLjg5MzMzM3MxNy4wNjY2NjctNi44MjY2NjcgMjMuODkzMzMzIDBsODUuMzMzMzMzIDg1LjMzMzMzM2M2LjgyNjY2NyA2LjgyNjY2NyA2LjgyNjY2NyAxNy4wNjY2NjcgMCAyMy44OTMzMzMgMCAzLjQxMzMzMy02LjgyNjY2NyAzLjQxMzMzMy0xMC4yNCAzLjQxMzMzNHoiIGZpbGw9IiNmZmZmZmYiIHAtaWQ9IjU0NDEiPjwvcGF0aD48L3N2Zz4="
+                            alt="" class="el-tooltip item" aria-describedby="el-tooltip-6875" tabindex="0"></li>
+                    <li style="background-color: rgb(255, 193, 0);"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTY1NDQyMjMwOTQ3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9Ijc0MzAiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUxMiAxMjcuOWM1MS45IDAgMTAyLjIgMTAuMSAxNDkuNSAzMC4yIDQ1LjcgMTkuMyA4Ni44IDQ3IDEyMi4xIDgyLjNzNjMgNzYuNCA4Mi4zIDEyMi4xYzIwIDQ3LjMgMzAuMiA5Ny42IDMwLjIgMTQ5LjVTODg2IDYxNC4yIDg2NS45IDY2MS41Yy0xOS4zIDQ1LjctNDcgODYuOC04Mi4zIDEyMi4xcy03Ni40IDYzLTEyMi4xIDgyLjNjLTQ3LjMgMjAtOTcuNiAzMC4yLTE0OS41IDMwLjJTNDA5LjggODg2IDM2Mi41IDg2NS45Yy00NS43LTE5LjMtODYuOC00Ny0xMjIuMS04Mi4zcy02My03Ni40LTgyLjMtMTIyLjFjLTIwLTQ3LjMtMzAuMi05Ny42LTMwLjItMTQ5LjVzMTAuMS0xMDIuMiAzMC4yLTE0OS41YzE5LjMtNDUuNyA0Ny04Ni44IDgyLjMtMTIyLjFzNzYuNC02MyAxMjIuMS04Mi4zYzQ3LjMtMjAgOTcuNi0zMC4yIDE0OS41LTMwLjJtMC02NEMyNjQuNSA2My45IDYzLjkgMjY0LjUgNjMuOSA1MTJTMjY0LjUgOTYwLjEgNTEyIDk2MC4xIDk2MC4xIDc1OS41IDk2MC4xIDUxMiA3NTkuNSA2My45IDUxMiA2My45eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNzQzMSI+PC9wYXRoPjxwYXRoIGQ9Ik00ODAgNzM2aDY0djY0aC02NHpNNDc2LjkgNjg2LjNjLTAuMy05LjMtMC40LTQyLjItMC40LTQ2LjggMC0yNy4zIDMuOS01MC44IDExLjYtNzAuNiA1LjctMTQuOSAxNC44LTMwIDI3LjQtNDUuMSA5LjMtMTEuMSAyNS45LTI3LjIgNTAtNDguNCAyNC0yMS4yIDM5LjctMzguMSA0Ni45LTUwLjdzMTAuOC0yNi40IDEwLjgtNDEuM2MwLTI3LTEwLjUtNTAuNy0zMS42LTcxLjItMjEuMS0yMC40LTQ2LjktMzAuNy03Ny41LTMwLjctMjkuNiAwLTU0LjMgOS4zLTc0LjEgMjcuOC0xOS44IDE4LjUtMzIuOCA0Ny40LTM5IDg2LjhsLTcxLjQtOC41YzYuNC01Mi43IDI1LjUtOTMuMSA1Ny4zLTEyMS4xczczLjctNDIgMTI1LjktNDJjNTUuMyAwIDk5LjQgMTUgMTMyLjMgNDUuMSAzMi45IDMwLjEgNDkuNCA2Ni41IDQ5LjQgMTA5LjIgMCAyNC43LTUuOCA0Ny40LTE3LjQgNjguM3MtMzQuMiA0Ni4yLTY3LjkgNzZjLTIyLjYgMjAuMS0zNy40IDM0LjgtNDQuNCA0NC40LTYuOSA5LjUtMTIuMSAyMC40LTE1LjQgMzIuOC0zLjMgMTIuMy01LjMgNTguNC01LjggODYuMmgtNjYuN3YtMC4yeiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNzQzMiI+PC9wYXRoPjwvc3ZnPg=="
+                            alt="" class="el-tooltip item" aria-describedby="el-tooltip-3799" tabindex="0"></li>
+                </ul>
+            </div>
+            <div class="sidebar-container el-scrollbar">
+                <div class="scrollbar-wrapper el-scrollbar__wrap" style="margin-bottom: -17px;">
+                    <div class="el-scrollbar__view" style="position: relative;">
+                        <ul role="menubar" class="el-menu--collapse el-menu" show-timeout="20" style="background-color: #222d32;">
+                            <div class="menu-wrapper">
+                                <li role="menuitem" aria-haspopup="true" class="el-submenu active" id="menu-1">
+                                    <div class="el-submenu__title">
+                                        <img src="./assets//img/menu-xxzx.png" alt="">
+                                        <span slot="title"></span><i class="el-submenu__icon-arrow el-icon-arrow-right"></i>
+                                    </div>
+                                </li>
+                                <li role="menuitem" aria-haspopup="true" class="el-submenu" id="menu-2">
+                                    <div class="el-submenu__title">
+                                        <img src="./assets//img/menu-zjgl.png" alt="">
+                                        <span slot="title"></span><i class="el-submenu__icon-arrow el-icon-arrow-right"></i>
+                                    </div>
+                                </li>
+                                <li role="menuitem" aria-haspopup="true" class="el-submenu" id="menu-3">
+                                    <div class="el-submenu__title">
+                                        <img src="./assets//img/menu-gwgl.png" alt="">
+                                        <span slot="title"></span><i class="el-submenu__icon-arrow el-icon-arrow-right"></i>
+                                    </div>
+                                </li>
+                                <li role="menuitem" aria-haspopup="true" class="el-submenu" id="menu-4">
+                                    <div class="el-submenu__title">
+                                        <img src="./assets//img/menu-ywtj.png" alt="">
+                                        <span slot="title"></span><i class="el-submenu__icon-arrow el-icon-arrow-right"></i>
+                                    </div>
+                                </li>
+                                <li role="menuitem" aria-haspopup="true" class="el-submenu" id="menu-5">
+                                    <div class="el-submenu__title">
+                                        <img src="./assets//img/menu-xtgl.png" alt="">
+                                        <span slot="title"></span><i class="el-submenu__icon-arrow el-icon-arrow-right"></i>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                        <div class="resize-triggers">
+                            <div class="expand-trigger">
+                                <div style="width: 181px; height: 916px;"></div>
+                            </div>
+                            <div class="contract-trigger"></div>
+                        </div>
+                        <img class="menu-switch" src="./assets/img/m-right.png" alt="">
+                    </div>
+                </div>
+                <div class="scrollbar-wrapper scrollbar-wrapper2 el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                    <div class="el-scrollbar__view" style="position: relative;">
+                        <ul role="menubar" class="el-menu--collapse el-menu el-menu2" show-timeout="20" style="background-color: #2b3a40;">
+                            <li>
+                                <h1>一级菜单名称</h1>
+                            </li>
+                            <li>
+                                <h2 class="my-active"><i class="my-icon-plus"></i>二级菜单名称</h2>
+                                <div class="menu-level3">
+                                    <p><i class="my-icon-right"></i>三级菜单名称</p>
+                                    <p><i class="my-icon-right"></i>三级菜单名称</p>
+                                    <p><i class="my-icon-right"></i>三级菜单名称</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h2><i class="my-icon-plus"></i>二级菜单名称</h2>
+                                <div class="menu-level3">
+                                    <p class="my-active"><i class="my-icon-right"></i>三级菜单名称</p>
+                                    <p><i class="my-icon-right"></i>三级菜单名称</p>
+                                    <p><i class="my-icon-right"></i>三级菜单名称</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="resize-triggers">
+                            <div class="expand-trigger">
+                                <div style="width: 181px; height: 916px;"></div>
+                            </div>
+                            <div class="contract-trigger"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="el-scrollbar__bar is-horizontal">
+                    <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                </div>
+            </div>
+            <div class="main-container">
+                <ul data-v-434e5b28="" role="menubar" class="navbar navbar2 el-menu--horizontal el-menu">
+                    <div data-v-64003126="" data-v-434e5b28="" class="hamburger-container" tabindex="0">
+                        <i class="my-icon-cd"></i> 一级菜单 <i class="my-icon-menu-r"></i> 二级菜单 <i class="my-icon-menu-r"></i> 三级菜单
+                    </div>
+                    <div class="search-wrap">
+                        <input type="text" placeholder="Type text to search....." />
+                        <i class="my-icon-search"></i>
+                    </div>
+                </ul>
+                <section class="app-main">
+                    <div data-v-a110a35a="" class="dashboard-container">
+                        <section data-v-2b225ef8="" class="el-container btn-wrap">
+                            <button data-v-2b225ef8="" type="button" class="el-button el-button--default">
+                                <span>
+                                    <i class="my-icon-opt1"></i>
+                                    项目修改</span>
+                                </button>
+                            <button data-v-2b225ef8="" type="button" class="el-button el-button--primary">
+                                <span><i class="my-icon-opt2"></i>
+                                    项目延续</span>
+                            </button>
+                            <button data-v-2b225ef8="" type="button" class="el-button el-button--default">
+                                <span><i class="my-icon-opt1"></i>
+                                    中期检查</span>
+                            </button>
+                            <button data-v-2b225ef8="" type="button" class="el-button el-button--default">
+                                <span><i class="my-icon-opt1"></i>
+                                    项目结算</span></button>
+                            <button data-v-2b225ef8="" type="button" class="el-button el-tooltip item el-button--default" aria-describedby="el-tooltip-3001" tabindex="0">
+                                <span><i class="my-icon-ljt"></i></span>
+                            </button>
+                            <button data-v-2b225ef8="" type="button" class="el-button el-tooltip item el-button--default" aria-describedby="el-tooltip-5163" tabindex="0">
+                                <span><i class="my-icon-fx"></i></span>
+                            </button>
+                            <div data-v-2b225ef8="" class="el-select my-select">
+                                <div class="el-input el-input--suffix select">
+                                    <select>
+                                        <option value="volvo">请选择申请中心</option>
+                                        <option value="saab">2</option>
+                                        <option value="opel">3</option>
+                                        <option value="audi">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div data-v-2b225ef8="" class="el-select my-select">
+                                <div class="el-input el-input--suffix select">
+                                    <select>
+                                        <option value="volvo">请选择年份</option>
+                                        <option value="saab">2</option>
+                                        <option value="opel">3</option>
+                                        <option value="audi">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="table-content2">
+                            <h1>项目经费情况汇总表（单位：元）双击蓝色数据查看明细</h1>
+                            <div class="table">
+                                <div class="table-cell w50">
+                                    <span>核发金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                                <div class="table-cell w50">
+                                    <span>可用金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="table-cell w50">
+                                    <span>核发金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                                <div class="table-cell w50">
+                                    <span>可用金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                            </div>
+                            <div class="table">
+                                <div class="table-cell w50">
+                                    <span>核发金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                                <div class="table-cell w50">
+                                    <span>可用金额</span>
+                                    <p>420000.00</p>
+                                </div>
+                            </div>
+                            <div class="table dividing-line">
+                                <div class="table-cell cross">
+                                    核发金额
+                                </div>
+                            </div>
+                            <div class="table table-detail table-title">
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                            </div>
+                            <div class="table table-detail">
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                            </div>
+                            <div class="table dividing-line">
+                                <div class="table-cell cross">
+                                    冲销金额
+                                </div>
+                            </div>
+                            <div class="table table-detail table-title">
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                                <div class="table-cell center">
+                                    固定资产
+                                </div>
+                            </div>
+                            <div class="table table-detail">
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                                <div class="table-cell center">
+                                    0.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/tooltip.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+
+</html>
