@@ -1,5 +1,30 @@
     .table-content2 {
         background-color: #fff;
+        /* 编辑 */
+        &.edit-table {
+            .cell-content {
+                // visibility: hidden;
+                display: none!important;
+            }
+            .cell-edit {
+                display: table-cell!important;
+                // visibility: visible;
+            }
+        }
+        /* 编辑 */
+        &.edit-table {
+            .p-normal {
+                // visibility: hidden;
+                display: none!important;
+            }
+            .p-edit {
+                display: inline-block!important;
+                // visibility: visible;
+                .input {
+                    margin-left: -14px!important;
+                }
+            }
+        }
         h1 {
             font-size: 16px;
             background-color: #2ab9d6;
@@ -38,6 +63,12 @@
                     font-size: 14px;
                     color: #000000;
                     margin: 0;
+                }
+                .input {
+                    width: 100%;
+                    margin-left: -12px;
+                    margin-top: -3px;
+                    padding-left: 10px;
                 }
                 &.right-cell {
                     text-align: right;
@@ -82,6 +113,9 @@
                             padding-top: 15px;
                         }
                     }
+                }
+                &.cell-content-single {
+                    height: auto;
                 }
             }
             &.table-detail {
