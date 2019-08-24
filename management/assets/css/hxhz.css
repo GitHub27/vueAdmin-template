@@ -5,7 +5,11 @@
   /* 编辑 */
 }
 
-.table-content2.edit-table .cell-content {
+.table-content2 .cell-edit {
+  display: none !important;
+}
+
+.table-content2.edit-table .cell-normal {
   display: none !important;
 }
 
@@ -23,6 +27,7 @@
 
 .table-content2.edit-table .p-edit .input {
   margin-left: -14px !important;
+  min-width: 290px;
 }
 
 .table-content2 h1 {
