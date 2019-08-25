@@ -5,8 +5,144 @@
   /* 编辑 */
 }
 
+.table-content2.table-wrap {
+  margin-top: 10px;
+  border: 9px solid #3a91d4;
+  border-radius: 5px;
+}
+
+.table-content2.table-wrap > h1 {
+  background-color: #3a91d4;
+  text-align: left;
+  border-radius: 0;
+  margin: -6px 0 4px 0;
+}
+
+.table-content2.table-wrap .header-menu {
+  list-style-type: none;
+  overflow: hidden;
+  border-bottom: 2px solid #2a79b2;
+  position: relative;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.table-content2.table-wrap .header-menu::after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background-color: #2ab9d6;
+}
+
+.table-content2.table-wrap .header-menu li {
+  list-style-type: none;
+  list-style: none;
+  float: left;
+  padding: 12px 26px;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+  margin-left: 3px;
+  border: 1px solid #e5e5e5;
+  color: #5a5a5a;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.table-content2.table-wrap .header-menu li .my-icon-opt1 {
+  margin-right: 3px;
+}
+
+.table-content2.table-wrap .header-menu li.active {
+  background-color: #2ab9d6;
+  border: 1px solid #2ab9d6;
+  color: #fff;
+}
+
+.table-content2.table-wrap .header-menu li.active .my-icon-opt1 {
+  background-image: url(../../assets/img/xmyx2.png);
+  margin-right: 3px;
+}
+
+.table-content2.table-wrap .header-menu2 {
+  overflow: hidden;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.table-content2.table-wrap .header-menu2 li {
+  cursor: pointer;
+  padding: 12px 12px 12px 1px;
+  color: #5a5a5a;
+  float: left;
+}
+
+.table-content2.table-wrap .header-menu2 li:focus, .table-content2.table-wrap .header-menu2 li:hover {
+  background-color: #f0f0f0;
+}
+
+.table-content2.table-wrap .header-menu2 li.btn-dy {
+  padding-right: 0;
+}
+
+.table-content2.table-wrap .header-menu2 li.btn-dy:focus, .table-content2.table-wrap .header-menu2 li.btn-dy:hover {
+  background-color: #fff;
+}
+
+.table-content2.table-wrap .header-menu2 li.btn-dy button {
+  height: 32px;
+  margin-top: -8px;
+}
+
+.table-content2.table-wrap .table-inner {
+  margin: 10px;
+  overflow-y: auto;
+  height: 520px;
+}
+
+.table-content2 .rheader-table {
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+.table-content2 .rheader-table .column {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.table-content2 .rheader-table p.rheader-left {
+  float: left;
+  width: 37px;
+  word-wrap: break-word;
+  letter-spacing: 20px;
+  color: #000;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 0;
+  text-align: center;
+  background-color: #94dcea;
+  border-right: 1px solid #fff;
+}
+
+.table-content2 .rheader-table .rheader-right {
+  float: left;
+  width: 90%;
+}
+
+.table-content2 .rheader-table .rheader-right .table:last-of-type {
+  margin-bottom: 0px;
+}
+
 .table-content2 .cell-edit {
   display: none !important;
+}
+
+.table-content2 .cell-inner-title {
+  border-bottom: 1px solid #4cc4dd;
 }
 
 .table-content2.edit-table .cell-normal {
@@ -68,7 +204,6 @@
 
 .table-content2 .table .table-cell p {
   display: inline-block;
-  height: 30px;
   line-height: 30px;
   padding-left: 23px;
   font-size: 14px;
@@ -104,6 +239,10 @@
   padding-left: 23px;
   font-size: 14px;
   color: #000000;
+}
+
+.table-content2 .table .table-cell.cell-title.cell-title-long {
+  width: 204px;
 }
 
 .table-content2 .table .table-cell.cell-content {
@@ -152,6 +291,10 @@
   position: relative;
 }
 
+.table-content2 .table.table-detail .table-cell.border0 {
+  border-right: 5px solid transparent;
+}
+
 .table-content2 .table.table-detail .table-cell::after {
   position: absolute;
   top: 0;
@@ -159,7 +302,7 @@
   bottom: 0;
   height: 100%;
   width: 1px;
-  background-color: #91d9e7;
+  background-color: #4cc4dd;
   content: '';
 }
 
@@ -188,6 +331,23 @@
   text-align: center;
   margin: 5px 0;
   padding-bottom: 10px;
+}
+
+.blue-border {
+  position: relative;
+  border-right: 3px solid #fff;
+}
+
+.blue-border::after {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  content: '';
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #2ab9d6;
 }
 
 .dividing-line {
