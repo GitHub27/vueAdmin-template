@@ -350,6 +350,13 @@
   }
 }
 
+// 会展安排
+.table-hzap {
+  h1 {
+    margin-bottom: 2px;
+  }
+}
+
 .blue-border {
   position: relative;
   border-right: 3px solid #fff;
@@ -377,4 +384,8 @@
 
 .center {
   text-align: center;
+}
+
+.bgw {
+  background-color: #fff !important;
 }
